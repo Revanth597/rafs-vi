@@ -1,6 +1,8 @@
 # RAFS-VI: Real-Time Auditory Feedback System for the Visually Impaired
 
-![Prototype](images/prototype/fig02_prototype_front_view.png)
+<p align="center">
+  <img src="images/prototype/fig02_prototype_front_view.png" width="450">
+</p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/Platform-Sipeed%20MaixCam-blue)
@@ -235,8 +237,6 @@ RAFS-VI/
 # Prototype Gallery
 
 <p align="center">
-
-<img src="images/prototype/fig01_prototype_left_front_view.png" width="200">
 
 <img src="images/prototype/fig02_prototype_front_view.png" width="200">
 
