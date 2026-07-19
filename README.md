@@ -71,7 +71,7 @@ RAFS-VI addresses this limitation by integrating embedded artificial intelligenc
 # System Architecture
 
 <p align="center">
-<img src="images/architecture/fig01_concept_of_operation.png" width="850">
+<img src="images/architecture/fig01_concept_of_operation.png" width="500">
 </p>
 
 The overall processing pipeline consists of:
@@ -236,11 +236,11 @@ RAFS-VI/
 
 <p align="center">
 
-<img src="images/prototype/fig01_prototype_left_front_view.png" width="260">
+<img src="images/prototype/fig01_prototype_left_front_view.png" width="200">
 
-<img src="images/prototype/fig02_prototype_front_view.png" width="260">
+<img src="images/prototype/fig02_prototype_front_view.png" width="200">
 
-<img src="images/prototype/fig04_prototype_right_front_view.png" width="260">
+<img src="images/prototype/fig04_prototype_right_front_view.png" width="200">
 
 </p>
 
