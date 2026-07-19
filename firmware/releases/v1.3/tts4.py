@@ -118,8 +118,8 @@ while not app.need_exit():
             # --- Audio Feedback ---
             current_time = time.ticks_ms()
             if label != last_label or (time.ticks_diff(current_time, last_play_time) > cooldown_ms):
-                label_path = f"/root/detected_audio_48k/{label}.wav"
-                distance_path = f"/root/detected_audio_48k/{distance_label}.wav"
+                label_path = f"/root/audios/objects/{label}.wav"
+                distance_path = f"/root/audios/distance/{distance_label}.wav"
 
                 if os.path.exists(label_path):
                     play_wav(label_path, volume=5)
