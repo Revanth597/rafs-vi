@@ -23,7 +23,7 @@ RAFS-VI is intended to function as an assistive awareness tool that complements 
 ## Prototype
 
 <p align="center">
-<img src="images/prototype/fig02_prototype_front_view.png" width="650">
+<img src="images/prototype/fig02_prototype_front_view.png" width="400">
 </p>
 
 The prototype integrates a forward-facing camera, embedded AI processor, rechargeable power supply, and speaker into a lightweight wearable eyeglass frame.
