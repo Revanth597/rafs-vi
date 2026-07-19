@@ -1,0 +1,71 @@
+cff-version: 1.2.0
+
+title: "RAFS-VI: Real-Time Auditory Feedback System for the Visually Impaired"
+
+message: >
+  If you use RAFS-VI in your research, please cite this repository.
+
+type: software
+
+authors:
+  - given-names: "Manikandan"
+    family-names: "J"
+    honorific-prefix: "Dr."
+
+  - given-names: "Parthavi N."
+    family-names: "R."
+    honorific-prefix: "Ms."
+
+  - given-names: "Revanth A."
+    family-names: "H."
+
+  - given-names: "Dheeraj"
+    family-names: "G. C."
+
+repository-code: "https://github.com/Revanth597/rafs-vi"
+
+abstract: >
+  RAFS-VI is an embedded AI wearable assistive system for visually
+  impaired users. The system performs real-time object detection,
+  monocular distance estimation, and offline auditory feedback using
+  a Sipeed MaixCam running a YOLOv11 Nano object detection model.
+
+keywords:
+  - assistive technology
+  - embedded AI
+  - computer vision
+  - wearable computing
+  - monocular vision
+  - object detection
+  - distance estimation
+  - YOLOv11
+  - MaixCam
+  - edge AI
+  - visual impairment
+
+license: MIT
+
+version: "1.0.0"
+
+date-released: 2026-07-19
+
+url: "https://github.com/Revanth597/rafs-vi"
+
+repository-code: "https://github.com/Revanth597/rafs-vi"
+
+institution: "PES University"
+
+preferred-citation:
+  type: patent
+  title: "A Smart Eye Glass Device for Assisting a Visually Impaired User and Its Method Thereof"
+  authors:
+    - given-names: "Manikandan"
+      family-names: "J"
+    - given-names: "Parthavi N."
+      family-names: "R."
+    - given-names: "Revanth A."
+      family-names: "H."
+    - given-names: "Dheeraj"
+      family-names: "G. C."
+  publisher: "Indian Patent Office"
+  year: 2026

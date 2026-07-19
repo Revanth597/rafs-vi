@@ -1,0 +1,22 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Source files
+*.py text
+*.md text
+*.txt text
+*.yml text
+*.yaml text
+*.json text
+
+# Documentation
+*.pdf binary
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# Models
+*.mud binary
+*.cvimodel binary
