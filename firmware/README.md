@@ -2,7 +2,7 @@
 
 This directory contains the embedded firmware developed for **RAFS-VI (Real-Time Auditory Feedback System for the Visually Impaired)**.
 
-The firmware coordinates the complete perception pipeline, including image acquisition, object detection, monocular distance estimation, decision making, and real-time audio feedback. All processing is performed locally on the embedded platform, enabling fully offline operation without cloud services, external computation, or internet connectivity.
+The firmware is designed for the Sipeed MaixCam platform and performs the complete perception pipeline locally, including image acquisition, object detection, monocular distance estimation, user interaction, and real-time spoken feedback. All processing is executed on-device, enabling fully offline operation without cloud services, external computation, or internet connectivity.
 
 ---
 
@@ -15,7 +15,16 @@ firmware/
 │   ├── v1.0/
 │   ├── v1.1/
 │   ├── v1.2/
-│   └── v1.3/
+│   ├── v1.3/
+│   └── v1.4/
+│
+├── main.py
+├── hardware.py
+├── config.py
+├── distance.py
+├── audio_utils.py
+├── ui.py
+├── utils.py
 │
 ├── CHANGELOG.md
 └── README.md
@@ -23,33 +32,48 @@ firmware/
 
 ---
 
+# Firmware Architecture
+
+The firmware follows a modular software architecture to improve readability, maintainability, and future extensibility.
+
+| Module | Responsibility |
+|---------|----------------|
+| `main.py` | Main application loop and control logic |
+| `hardware.py` | Initializes camera, display, touchscreen, audio, GPIO, and YOLO detector |
+| `config.py` | Centralized firmware configuration constants |
+| `distance.py` | Monocular distance estimation and formatting |
+| `audio_utils.py` | Audio playback and spoken announcement handling |
+| `ui.py` | Embedded user interface rendering |
+| `utils.py` | Shared helper functions |
+
+---
+
 # Processing Pipeline
 
-The embedded application follows the processing pipeline illustrated below.
-
 ```text
-Camera Frame
-      │
-      ▼
+Camera
+   │
+   ▼
 YOLOv11 Inference
-      │
-      ▼
+   │
+   ▼
 Bounding Box Extraction
-      │
-      ▼
+   │
+   ▼
 Distance Estimation
-      │
-      ▼
-Detection Filtering
-      │
-      ▼
-Decision Logic
-      │
-      ▼
-Audio Playback
+   │
+   ▼
+Detection Validation
+   │
+   ▼
+Announcement Decision
+   │
+   ▼
+Object Audio
+   │
+   ▼
+Distance Audio
 ```
-
-Each stage executes sequentially on the embedded platform, allowing the system to deliver real-time spoken feedback while maintaining low computational overhead.
 
 ---
 
@@ -57,77 +81,53 @@ Each stage executes sequentially on the embedded platform, allowing the system t
 
 The firmware is responsible for:
 
-- Initializing the camera and embedded hardware
-- Loading the deployed YOLOv11 model
-- Performing real-time object detection
-- Extracting bounding-box information
-- Estimating object distance using monocular geometry
-- Filtering unreliable detections
-- Suppressing duplicate announcements
-- Managing announcement timing
-- Controlling audio playback
-- Processing user input
-- Managing system status indicators
+- Camera initialization
+- Loading the YOLOv11 detection model
+- Real-time object detection
+- Bounding-box extraction
+- Monocular distance estimation
+- Detection filtering
+- Duplicate announcement suppression
+- Announcement cooldown management
+- Audio playback
+- User interaction
+- Status indication
 
 ---
 
 # Distance Estimation
 
-Object distance is estimated using a calibration-based monocular vision approach.
+Object distance is estimated using a calibration-based monocular vision model.
 
-The runtime implementation combines bounding-box measurements with experimentally derived calibration models to estimate the distance between the user and detected objects.
+The implementation combines camera parameters with detected bounding-box width to estimate the distance between the user and surrounding objects.
 
-The calibration methodology, datasets, and supporting analysis are documented in the `calibrations/` directory.
-
----
-
-# Detection Management
-
-To improve usability and reduce unnecessary audio feedback, several filtering stages are applied before an announcement is generated.
-
-These include:
-
-- Confidence thresholding
-- Duplicate detection suppression
-- Announcement cooldown management
-- Stable detection selection
-
-These mechanisms help reduce repetitive announcements while maintaining responsive system behavior.
+Calibration methodology and experimental data are available in the `calibrations/` directory.
 
 ---
 
 # Audio Feedback
 
-When a valid detection is accepted, the firmware selects the corresponding object announcement and distance announcement from the available audio assets.
+When a valid detection is accepted:
 
-If both audio prompts are available, they are played sequentially to produce natural spoken feedback.
+1. The object announcement is played.
+2. The corresponding distance announcement is played.
 
 Example:
 
 > Person... 1.5 meters.
 
-Objects without a corresponding prerecorded voice prompt continue to be detected normally, although no spoken announcement is generated for that object.
+Objects without an associated prerecorded voice prompt continue to be detected normally but are not announced.
 
 ---
 
 # User Interface
 
-The wearable prototype provides a simple embedded user interface consisting of:
+The embedded interface consists of:
 
-- Push button
+- Touchscreen exit button
+- Push button to enable or disable detection
 - Status LED
-
-The push button enables or disables object detection, while the status LED provides a visual indication of the current operating state.
-
----
-
-# Firmware Releases
-
-The firmware evolved through multiple development iterations during the implementation of RAFS-VI.
-
-Each release introduces improvements in functionality, stability, and overall system performance.
-
-A detailed development history is available in `CHANGELOG.md`.
+- Live detection overlays
 
 ---
 
@@ -136,18 +136,26 @@ A detailed development history is available in `CHANGELOG.md`.
 The firmware was developed with the following objectives:
 
 - Fully offline execution
-- Real-time embedded inference
-- Low-latency processing
-- Lightweight software architecture
-- Low power consumption
+- Real-time inference
+- Modular architecture
+- Maintainable source code
+- Low-latency response
+- Lightweight implementation
 - Reliable operation
-- Modular and maintainable code
 
 ---
 
-# Notes
+# Firmware Releases
 
-- All processing is performed on the embedded device.
-- No cloud services or smartphone connectivity are required.
-- Object detection, distance estimation, and audio feedback execute entirely on the MaixCam platform.
-- The firmware is designed to operate as a self-contained embedded application.
+Development history is documented in `CHANGELOG.md`.
+
+Current release:
+
+**Version 1.4**
+
+---
+
+# Authors
+
+- Revanth A H
+- Parthavi N R

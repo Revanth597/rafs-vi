@@ -1,9 +1,24 @@
 """
+Blind Assist Application
+
+Author(s):
+    Revanth A H
+    Parthavi N R
+
+Description:
+    Main application entry point.
+    Handles application flow, object detection,
+    user interaction, and audio feedback.
+
+Copyright (c) 2026
+"""
+"""
 main.py
 
 Blind Assist Application
 
 Main execution loop.
+
 """
 
 from maix import app, time

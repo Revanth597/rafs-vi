@@ -1,4 +1,19 @@
 """
+Blind Assist Application
+
+Author(s):
+    Revanth A H
+    Parthavi N R
+
+Description:
+    Initializes and manages all hardware peripherals,
+    including the camera, display, touchscreen,
+    YOLO detector, audio player, push button,
+    and status LED.
+
+Copyright (c) 2026
+"""
+"""
 hardware.py
 
 Hardware initialization for the Blind Assist application.

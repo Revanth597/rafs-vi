@@ -1,4 +1,17 @@
 """
+Blind Assist Application
+
+Author(s):
+    Revanth A H
+    Parthavi N R
+
+Description:
+    Provides distance estimation and distance
+    formatting utilities for detected objects.
+
+Copyright (c) 2026
+"""
+"""
 distance.py
 
 Distance estimation utilities for the Blind Assist application.

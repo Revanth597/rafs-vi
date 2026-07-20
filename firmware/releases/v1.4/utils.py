@@ -1,4 +1,18 @@
 """
+Blind Assist Application
+
+Author(s):
+    Revanth A H
+    Parthavi N R
+
+Description:
+    General utility functions used throughout
+    the Blind Assist application.
+
+Copyright (c) 2026
+"""
+
+"""
 utils.py
 
 General helper functions used throughout the Blind Assist application.

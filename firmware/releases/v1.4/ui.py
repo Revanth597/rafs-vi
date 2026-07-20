@@ -1,4 +1,18 @@
 """
+Blind Assist Application
+
+Author(s):
+    Revanth A H
+    Parthavi N R
+
+Description:
+    Contains all user interface drawing functions,
+    including detection overlays, labels,
+    status indicators, and exit button rendering.
+
+Copyright (c) 2026
+"""
+"""
 ui.py
 
 User interface helper functions for the Blind Assist application.

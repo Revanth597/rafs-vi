@@ -1,4 +1,17 @@
 """
+Blind Assist Application
+
+Author(s):
+    Revanth A H
+    Parthavi N R
+
+Description:
+    Handles audio playback for detected objects
+    and estimated distances.
+
+Copyright (c) 2026
+"""
+"""
 audio_utils.py
 
 Audio playback utilities for the Blind Assist application.

@@ -1,4 +1,18 @@
 """
+Blind Assist Application
+
+Author(s):
+    Revanth A H
+    Parthavi N R
+
+Description:
+    Central configuration file containing
+    application constants and hardware settings.
+
+Copyright (c) 2026
+"""
+
+"""
 config.py
 
 Configuration settings for the Blind Assist application.

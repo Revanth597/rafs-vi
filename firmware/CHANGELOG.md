@@ -2,7 +2,30 @@
 
 All notable changes to the RAFS-VI firmware are documented in this file.
 
-The firmware follows a progressive development model, with each release introducing improvements in functionality, stability, and overall user experience.
+The firmware has evolved through multiple development iterations focused on improving modularity, performance, usability, and maintainability.
+
+---
+
+# Version 1.4
+
+## Added
+
+- Modular firmware architecture
+- Dedicated hardware abstraction module
+- Centralized configuration management
+- Separate distance estimation module
+- Dedicated audio playback utilities
+- Embedded UI rendering module
+- Shared utility module
+- Improved project documentation
+
+## Improved
+
+- Code readability
+- Software maintainability
+- Project organization
+- Runtime stability
+- Firmware scalability
 
 ---
 
@@ -13,15 +36,15 @@ The firmware follows a progressive development model, with each release introduc
 - Improved object detection stability
 - Enhanced announcement timing control
 - Refined duplicate detection suppression
-- Additional voice prompts and audio assets
-- General firmware optimizations
+- Additional prerecorded audio prompts
+- Runtime optimizations
 
 ## Improved
 
-- Runtime performance
-- Audio playback responsiveness
 - Detection consistency
-- Overall user experience
+- Audio playback responsiveness
+- Overall runtime performance
+- User experience
 
 ---
 
@@ -46,7 +69,7 @@ The firmware follows a progressive development model, with each release introduc
 
 ## Added
 
-- Object-specific audio announcements
+- Object-specific spoken announcements
 - Distance-based speech feedback
 - User interface improvements
 - Status LED indication
@@ -64,24 +87,29 @@ The firmware follows a progressive development model, with each release introduc
 
 ## Initial Release
 
-The first functional release of the RAFS-VI firmware featuring:
+Initial embedded firmware featuring:
 
 - Camera initialization
 - YOLOv11 object detection
 - Bounding-box extraction
 - Monocular distance estimation
 - Offline speech feedback
-- Embedded execution on the Sipeed MaixCam platform
+- Embedded execution on the Sipeed MaixCam
 - Basic user interaction
-- Self-contained offline operation
+- Fully offline operation
 
 ---
 
 # Versioning Policy
 
-Firmware releases follow incremental version numbering.
+The RAFS-VI firmware follows incremental semantic versioning.
 
-- **Major versions** represent significant architectural or feature changes.
-- **Minor versions** introduce new functionality, performance improvements, and bug fixes while maintaining compatibility with previous releases.
+- **Major versions** introduce significant architectural or functional changes.
+- **Minor versions** introduce new functionality, performance improvements, documentation updates, and bug fixes while maintaining compatibility with previous releases.
 
-Each release reflects the continuous development of the RAFS-VI embedded perception system.
+---
+
+# Authors
+
+- Revanth A H
+- Parthavi N R
