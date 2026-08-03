@@ -15,7 +15,7 @@ bench
 bird
 cat
 dog
-horsea
+horse
 sheep
 cow
 elephant
