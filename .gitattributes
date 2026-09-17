@@ -1,6 +1,5 @@
 # Auto-detect text files and normalize line endings
 * text=auto
-
 # Source files
 *.py text
 *.md text
@@ -8,15 +7,14 @@
 *.yml text
 *.yaml text
 *.json text
-
 # Documentation
 *.pdf binary
-
 # Images
 *.png binary
 *.jpg binary
 *.jpeg binary
-
 # Models
 *.mud binary
 *.cvimodel binary
+conference/I-SMAC-926_Presentation.pptx filter=lfs diff=lfs merge=lfs -text
+demo/RAFS_VI_Demo.mp4 filter=lfs diff=lfs merge=lfs -text

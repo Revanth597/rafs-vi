@@ -155,7 +155,7 @@ All processing occurs locally on the embedded device without requiring network c
 
 RAFS-VI employs a quantized **YOLOv11 Nano** object detection model optimized for embedded inference on the Sipeed MaixCam platform.
 
-The trained model is converted into the **`.mud`** format for deployment using the MaixPy runtime, enabling efficient execution on the integrated Neural Processing Unit (NPU). The model performs real-time object detection entirely on-device without requiring cloud-based processing.
+The YOLOv11 Nano model is deployed in the **`.mud`** format through the MaixHub/MaixPy deployment workflow, enabling efficient execution on the integrated Neural Processing Unit (NPU). The model performs real-time object detection entirely on-device without requiring cloud-based processing.
 
 Model-related resources, deployment files, and additional variants are available in the `models/` directory.
 
@@ -196,12 +196,14 @@ Audio resources are organized inside the `audios/` directory.
 
 # Repository Structure
 
-```
+```text
 RAFS-VI/
 │
 ├── audios/
 ├── cad/
 ├── calibrations/
+├── conference/
+├── demo/
 ├── firmware/
 ├── hardware/
 ├── images/
@@ -214,100 +216,3 @@ RAFS-VI/
 ├── CITATION.cff
 ├── LICENSE
 └── README.md
-```
-
----
-
-# Repository Modules
-
-| Directory | Description |
-|------------|-------------|
-| **audios/** | Offline speech prompts used for audio feedback |
-| **cad/** | Mechanical CAD renderings of the wearable prototype |
-| **calibrations/** | Experimental calibration data, MATLAB scripts, and testbench |
-| **firmware/** | Embedded MaixPy application implementing the complete processing pipeline |
-| **hardware/** | Hardware documentation, BOM, wiring diagrams, and power configurations |
-| **images/** | Architecture diagrams and prototype photographs |
-| **models/** | YOLOv11 deployment models and supporting resources |
-| **paper/** | Research paper and publication material |
-| **patent/** | Patent publication and related documentation |
-
----
-
-# Prototype Gallery
-
-<p align="center">
-
-<img src="images/prototype/fig02_prototype_front_view.png" width="200">
-
-<img src="images/prototype/fig04_prototype_right_front_view.png" width="200">
-
-</p>
-
-Additional prototype photographs are available in the `images/prototype/` directory.
-
----
-
-# CAD Renderings
-
-<p align="center">
-
-<img src="cad/renders/front_view.png" width="300">
-
-<img src="cad/renders/left_isometric.png" width="300">
-
-<img src="cad/renders/right_isometric.png" width="300">
-
-</p>
-
-The CAD renderings illustrate the overall wearable assembly and complement the physical prototype.
-
----
-
-# Patent
-
-The concepts and system architecture presented in this repository are associated with the following published Indian patent application:
-
-**A Smart Eye Glass Device for Assisting a Visually Impaired User and Its Method Thereof**
-
-The official patent publication is available in the `patent/` directory.
-
----
-
-# Research Paper
-
-The accompanying research paper describing the system design, implementation, and experimental evaluation is available in the `paper/` directory.
-
----
-
-# Citation
-
-If you use RAFS-VI in your research, academic work, or derivative projects, please cite this repository using the information provided in `CITATION.cff`.
-
----
-
-# License
-
-This project is released under the **MIT License**.
-
-See the `LICENSE` file for complete licensing information.
-
----
-
-# Acknowledgements
-
-This project was developed as part of research activities at **PES University**.
-
-The authors gratefully acknowledge the guidance, technical support, and academic environment that made this work possible.
-
----
-
-<p align="center">
-
-**RAFS-VI**
-
-*Real-Time Auditory Feedback System for the Visually Impaired*
-
-*Embedded AI • Computer Vision • Wearable Assistive Technology*
-
-</p>
