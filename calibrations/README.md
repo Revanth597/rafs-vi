@@ -30,7 +30,15 @@ calibrations/
 │   │   ├── suitcase_calibration.png
 │   │   └── vase_calibration.png
 │   │
-│   ├── distance_calibration.m
+│   ├── plots 2/
+│   │   ├── cellphone.png
+│   │   ├── chair.png
+│   │   ├── laptop.png
+│   │   ├── person.png
+│   │   ├── suitcase.png
+│   │   └── vase.png
+│   │
+│   ├── distance_calibration_plot.m
 │   ├── distance_calibration_equations.pdf
 │   └── README.md
 │
@@ -108,7 +116,7 @@ For each calibrated object, the script:
 - Performs polynomial curve fitting
 - Generates residual plots to evaluate model accuracy
 
-The resulting calibration figures are available in `matlab/plots/`.
+The resulting calibration figures are available in `matlab/plots/` and `matlab/plots 2/`.
 
 ---
 
